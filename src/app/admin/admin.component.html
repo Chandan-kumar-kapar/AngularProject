@@ -1,0 +1,46 @@
+<div class="jumbotron center">
+  <h2>Admin Page</h2>
+</div>
+<div class="container" style="padding: 4px">
+  <div class="row">
+    <div class="col-3">
+      <cdk-virtual-scroll-viewport itemSize="10" class="container">
+        <table>
+          <tr>
+            <th>EmployeeID</th>
+            <th>Gender</th>
+          </tr>
+          <tr *cdkVirtualFor="let employee of employees">
+            <td (click)="setEmp(employee[0])">{{ employee[1] }}</td>
+            <td>{{ employee[2] }}</td>
+          </tr>
+        </table>
+      </cdk-virtual-scroll-viewport>
+    </div>
+    <div class="col-9">
+      <div class="center" *ngFor="let Emp of employees">
+        <div *ngIf="check(Emp[0], emp)">
+          <h3 class="center">Employee Information</h3>
+          <table>
+            <tr>
+              <th>EmployeeID</th>
+              <td>{{ Emp[1] }}</td>
+            </tr>
+            <tr>
+              <th>Name</th>
+              <td>{{ Emp[3] }}</td>
+            </tr>
+            <tr>
+              <th>Phone No.</th>
+              <td>{{ Emp[4] }}</td>
+            </tr>
+            <tr>
+              <th>Address</th>
+              <td>{{ Emp[5] }}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

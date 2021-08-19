@@ -1,0 +1,19 @@
+td,
+th {
+  border: solid rgb(67, 67, 177);
+  text-align: center;
+  height: 40px;
+}
+
+.container {
+  height: 403px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jumbotron {
+  background-color: rgb(197, 216, 233);
+  height: 60px;
+}
